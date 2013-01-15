@@ -1,2 +1,28 @@
-ln -s .tmux.conf ~/.tmux.conf
-ln -s .tmux-powerlinerc ~/.tmux-powerlinerc
+#!/bin/bash
+
+# Install program and dependencies, if doesn't yet exist.
+[[ -z command -v xclip]] && sudo apt-get install -y xclip
+if [[ -z `command -v "tmux"` ]]; then
+	sudo apt-get build-dep tmux
+	cd /usr/local/share
+	sudo git clone https://github.com/ThomasAdam/tmux.git
+	cd tmux
+	sudo ./autogen.sh
+	sudo ./configure --prefix=/usr/local
+	sudo make
+	sudo make install
+done
+
+# Link configurations
+ln -s .tmux.conf $HOME/.tmux.conf
+ln -s .tmux-powerlinerc $HOME/.tmux-powerlinerc
+ln -s $HOME/Dropbox/Config/.tmuxinator $HOME/.tmuxinator
+
+# Install libraries
+[[ -z command -v tmuxinator]] && gem install tmuxinator
+if [[ -z `command -v "wemux"` ]]; then
+	sudo cp $HOME/.tmux/lib/wemux /usr/local/share/wemux
+	sudo ln -s /usr/local/share/wemux/wemux /usr/local/bin/wemux
+	sudo cp /usr/local/share/wemux/wemux.conf.example /usr/local/etc/wemux.conf
+	sudo sed -i "s/change_this/$USER/g" /usr/local/etc/wemux.conf
+done
