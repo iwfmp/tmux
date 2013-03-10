@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Install program and dependencies, if doesn't yet exist.
-[[ -z command -v xclip]] && sudo apt-get install -y xclip
+[[ -z command -v xclip ]] && sudo apt-get install -y xclip
 if [[ -z `command -v "tmux"` ]]; then
 	# Install Dependencies
 	evnDependencies="cvs gcc make autoconf automake libtool libglib2.0-dev libslang2-dev intltool"
 	for evnDependency in $evnDependencies; do
-		[[ -z command -v ${evnDependency}]] && sudo apt-get install -y ${evnDependency}
+		[[ -z command -v ${evnDependency} ]] && sudo apt-get install -y ${evnDependency}
 	done
 
 	# Install Tmux via Git repository for latest version
@@ -25,7 +25,7 @@ ln -s .tmux.conf $HOME/.tmux.conf
 ln -s .tmux-powerlinerc $HOME/.tmux-powerlinerc
 
 # Install libraries
-[[ -z command -v tmuxinator]] && gem install tmuxinator
+[[ -z command -v tmuxinator ]] && gem install tmuxinator
 ln -s $HOME/Dropbox/Config/.tmuxinator/ $HOME/.tmuxinator/
 
 #WeMux
