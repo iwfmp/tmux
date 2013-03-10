@@ -18,7 +18,7 @@ if [[ -z `command -v "tmux"` ]]; then
 	sudo ./configure --prefix=/usr/local
 	sudo make
 	sudo make install
-done
+fi
 
 # Link configurations
 ln -s .tmux.conf $HOME/.tmux.conf
