@@ -23,6 +23,7 @@ fi
 # Link configurations
 ln -s $HOME/.tmux/.tmux.conf $HOME/.tmux.conf
 ln -s $HOME/.tmux/.tmux-powerlinerc $HOME/.tmux-powerlinerc
+cp $HOME/.tmux/lib/tmux-powerline/themes/default.sh $HOME/.tmux/lib/tmux-powerline/themes/elad.sh
 
 # Install libraries
 [[ -z `command -v tmuxinator` ]] && gem install tmuxinator

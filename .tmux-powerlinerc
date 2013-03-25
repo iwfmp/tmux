@@ -1,7 +1,7 @@
 General {
 	export TMUX_POWERLINE_DEBUG_MODE_ENABLED="false"
 	export TMUX_POWERLINE_PATCHED_FONT_IN_USE="true"
-	export TMUX_POWERLINE_THEME="EladRom"
+	export TMUX_POWERLINE_THEME="elad"
 }
 
 weather.sh {
