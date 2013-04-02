@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 # create the pane with irssi's nicklist
 function irssi_nickpane() {
     tmux renamew irssi                                              # name the window

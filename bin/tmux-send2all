@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 # Runs the specified command (provided by the first argument) in all tmux panes
 # for every window regardless if applications are running in the terminal or not.
