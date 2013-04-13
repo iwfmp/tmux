@@ -1,27 +1,41 @@
-General {
+# General {
 	export TMUX_POWERLINE_DEBUG_MODE_ENABLED="false"
 	export TMUX_POWERLINE_PATCHED_FONT_IN_USE="true"
 	export TMUX_POWERLINE_THEME="elad"
-}
+# }
 
-weather.sh {
-	# The data provider to use. Currently only "yahoo" is supported.
+# weather.sh {
 	export TMUX_POWERLINE_SEG_WEATHER_DATA_PROVIDER="yahoo"
-	# What unit to use. Can be any of {c,f,k}.
 	export TMUX_POWERLINE_SEG_WEATHER_UNIT="c"
-	# How often to updat the weahter in seconds.
 	export TMUX_POWERLINE_SEG_WEATHER_UPDATE_PERIOD="600"
 
 	# You location. Find a code that works for you:
 	# 1. Go to Yahoo weather http://weather.yahoo.com/
 	# 2. Find the weather for you location
 	# 3. Copy the last numbers in that URL. e.g. "http://weather.yahoo.com/united-states/california/newport-beach-12796587/" has the number "12796587"
-	export TMUX_POWERLINE_SEG_WEATHER_LOCATION="12796587"
-}
+	export TMUX_POWERLINE_SEG_WEATHER_LOCATION="1968212"
+# }
 
-# Default configuration file for tmux-powerline.
-# Modeline {
-#	 vi: foldmarker={,} foldmethod=marker foldlevel=0 tabstop=4 filetype=sh
+# date.sh {
+	# date(1) format for the date. If you don't, for some reason, like ISO 8601 format you might want to have "%D" or "%m/%d/%Y".
+	export TMUX_POWERLINE_SEG_DATE_FORMAT="%d/%m/%Y"
+# }
+
+# time.sh {
+	# date(1) format for the time. Americans might want to have "%I:%M %p".
+	export TMUX_POWERLINE_SEG_TIME_FORMAT="%H:%M"
+# }
+
+# hostname.sh {
+	# Use short or long format for the hostname. Can be {"short, long"}.
+	export TMUX_POWERLINE_SEG_HOSTNAME_FORMAT="short"
+# }
+
+# -----------------------------------------------------------------------------------------------------------------------------------
+
+# pwd.sh {
+	# Maximum length of output.
+	export TMUX_POWERLINE_SEG_PWD_MAX_LEN="20"
 # }
 
 # battery.sh {
@@ -29,33 +43,6 @@ weather.sh {
 	export TMUX_POWERLINE_SEG_BATTERY_TYPE="percentage"
 	# How may hearts to show if cute indicators are used.
 	export TMUX_POWERLINE_SEG_BATTERY_NUM_HEARTS="5"
-# }
-
-# date.sh {
-	# date(1) format for the date. If you don't, for some reason, like ISO 8601 format you might want to have "%D" or "%m/%d/%Y".
-	export TMUX_POWERLINE_SEG_DATE_FORMAT="%F"
-# }
-
-# earthquake.sh {
-	# The data provider to use. Currently only "goo" is supported.
-	export TMUX_POWERLINE_SEG_EARTHQUAKE_DATA_PROVIDER="goo"
-	# How often to update the earthquake data in seconds.
-	# Note: This is not an early warning detector, use this
-	# to be informed about recent earthquake magnitudes in your
-	# area. If this is too often, goo may decide to ban you form
-	# their server
-	export TMUX_POWERLINE_SEG_EARTHQUAKE_UPDATE_PERIOD="600"
-	# Only display information when earthquakes are within this many minutes
-	export TMUX_POWERLINE_SEG_EARTHQUAKE_ALERT_TIME_WINDOW="60"
-	# Display time with this format
-	export TMUX_POWERLINE_SEG_EARTHQUAKE_TIME_FORMAT='(%H:%M)'
-	# Display only if magnitude is greater or equal to this number
-	export TMUX_POWERLINE_SEG_EARTHQUAKE_MIN_MAGNITUDE="3"
-# }
-
-# hostname.sh {
-	# Use short or long format for the hostname. Can be {"short, long"}.
-	export TMUX_POWERLINE_SEG_HOSTNAME_FORMAT="short"
 # }
 
 # mailcount.sh {
@@ -107,14 +94,4 @@ weather.sh {
 	export TMUX_POWERLINE_SEG_NOW_PLAYING_LASTFM_USERNAME=""
 	# How often in seconds to update the data from last.fm.
 	export TMUX_POWERLINE_SEG_NOW_PLAYING_LASTFM_UPDATE_PERIOD="30"
-# }
-
-# pwd.sh {
-	# Maximum length of output.
-	export TMUX_POWERLINE_SEG_PWD_MAX_LEN="40"
-# }
-
-# time.sh {
-	# date(1) format for the time. Americans might want to have "%I:%M %p".
-	export TMUX_POWERLINE_SEG_TIME_FORMAT="%H:%M"
 # }
