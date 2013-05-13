@@ -11,13 +11,13 @@ if [[ -z `command -v "tmux"` ]]; then
 
 	# Install Tmux via Git repository for latest version
 	sudo apt-get build-dep tmux
-	cd /usr/local/share
+	cd /usr/local/src
 	sudo git clone https://github.com/ThomasAdam/tmux.git
 	cd tmux
 	sudo ./autogen.sh
 	sudo ./configure --prefix=/usr/local
 	make
-	sudo make install
+	sudo make clean install
 fi
 
 # Link configurations
