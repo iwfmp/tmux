@@ -1,1 +1,1 @@
-# Tmux configuration
+# Tmux Configuration
