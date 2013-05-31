@@ -1,9 +1,0 @@
-[submodule "lib/tmux-solarized"]
-	path = lib/tmux-solarized
-	url = https://github.com/seebi/tmux-colors-solarized.git
-[submodule "lib/tmux-powerline"]
-	path = lib/tmux-powerline
-	url = https://github.com/erikw/tmux-powerline.git
-[submodule "lib/wemux"]
-	path = lib/wemux
-	url = https://github.com/zolrath/wemux.git
