@@ -11,14 +11,16 @@ if [[ -z `command -v "tmux"` ]]; then
 fi
 
 # Link configurations
-ln -s $HOME/.tmux/init/.tmux.conf $HOME/
-ln -s $HOME/.tmux/init/.tmux-powerlinerc $HOME/
-ln -s $HOME/.tmux/init/powerline.sh $HOME/.tmux/lib/tmux-powerline/themes/
+ln -s $HOME/.tmux/init/.tmux.conf $HOME/ > /dev/null 2>&1
+ln -s $HOME/.tmux/init/.tmux-powerlinerc $HOME/ > /dev/null 2>&1
+ln -s $HOME/.tmux/init/powerline.sh $HOME/.tmux/lib/tmux-powerline/themes/ > /dev/null 2>&1
 
 # Install libraries
 [[ -z `command -v tmuxinator` ]] && gem install tmuxinator --no-ri --no-rdoc
 
 #WeMux
-ln -s $HOME/.tmux/lib/wemux/wemux $HOME/.tmux/bin/
-sudo cp $HOME/.tmux/lib/wemux/wemux.conf.example /usr/local/etc/wemux.conf
-sudo sed -i "s/change_this/$USER/g" /usr/local/etc/wemux.conf
+if [[ -z `command -v "wemux"` ]]; then
+	ln -s $HOME/.tmux/lib/wemux/wemux $HOME/.tmux/bin/
+	sudo cp $HOME/.tmux/lib/wemux/wemux.conf.example /usr/local/etc/wemux.conf
+	sudo sed -i "s/change_this/$USER/g" /usr/local/etc/wemux.conf
+fi
