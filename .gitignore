@@ -2,5 +2,3 @@ bin/wemux
 
 lib/
 lib/tmux-solarized
-lib/tmux-powerline
-lib/wemux
