@@ -1,6 +1,6 @@
 #!/bin/bash
 
 echo "Creating all symbolic links for tmux"
-ln -sf $HOME/.tmux/init/.tmux.conf $HOME/ > /dev/null 2>&1
-ln -sf $HOME/.tmux/init/.tmux-powerlinerc $HOME/ > /dev/null 2>&1
-ln -sf $HOME/.tmux/init/powerline.sh $HOME/.tmux/lib/powerline/themes/ > /dev/null 2>&1
+ln -sf $HOME/.config/tmux/init/.tmux.conf $HOME/ > /dev/null 2>&1
+ln -sf $HOME/.config/tmux/init/.tmux-powerlinerc $HOME/ > /dev/null 2>&1
+ln -sf $HOME/.config/tmux/init/powerline.sh $HOME/.tmux/lib/powerline/themes/ > /dev/null 2>&1
