@@ -1,9 +1,3 @@
-solarized:
-  repo: https://github.com/seebi/tmux-colors-solarized.git
-  path: lib
-powerline:
-  repo: https://github.com/erikw/tmux-powerline.git
-  path: lib
-wemux:
-  repo: https://github.com/zolrath/wemux.git
+tpm:
+  repo: https://github.com/tmux-plugins/tpm
   path: lib
