@@ -1,3 +1,12 @@
-tpm:
-  repo: https://github.com/tmux-plugins/tpm
+yank:
+  repo: https://github.com/tmux-plugins/tmux-yank
+  path: lib
+copycat:
+  repo: https://github.com/tmux-plugins/tmux-copycat
+  path: lib
+open:
+  repo: https://github.com/tmux-plugins/tmux-open
+  path: lib
+logging:
+  repo: https://github.com/tmux-plugins/tmux-logging
   path: lib
