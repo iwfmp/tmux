@@ -10,3 +10,6 @@ open:
 logging:
   repo: https://github.com/tmux-plugins/tmux-logging
   path: lib
+powerline:
+  repo: https://github.com/erikw/tmux-powerline
+  path: lib
